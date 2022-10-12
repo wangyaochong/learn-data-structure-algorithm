@@ -18,7 +18,6 @@ public class T010_isMatct_rec {
                 return true;
             }
             if (sLoc < s.length() && (s.charAt(sLoc) == p.charAt(pLoc) || p.charAt(pLoc) == '.')) {//匹配N个字符
-
                 return isMatch(s, sLoc + 1, p, pLoc);//这里没有使用循环，可以移动一位后，再次调用isMatch
             }
         }
