@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import java.util.Arrays;
 
-public class T031_nextPermutation {
+public class T0031_nextPermutation {
 
     //    	测试用例:[4,2,0,2,3,2,0]
 //	测试结果:[4,2,2,0,0,2,3]
@@ -10,7 +10,7 @@ public class T031_nextPermutation {
     public static void main(String[] args) {
         int[] arr = {4, 2, 0, 2, 3, 2, 0};
 //        int[] arr = {1, 3, 2};
-        new T031_nextPermutation().nextPermutation(arr);
+        new T0031_nextPermutation().nextPermutation(arr);
         System.out.println(Arrays.toString(arr));
     }
 

@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import leetcode.base.definition.ListNode;
 
-public class T021_mergeTwoLists {
+public class T0021_mergeTwoLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode head = new ListNode();
         ListNode tail = head;

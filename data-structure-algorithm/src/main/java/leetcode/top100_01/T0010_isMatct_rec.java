@@ -3,7 +3,7 @@ package leetcode.top100_01;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class T010_isMatct_rec {
+public class T0010_isMatct_rec {
     public boolean isMatch(String s, String p) {
         return isMatch(s, 0, p, 0);
     }

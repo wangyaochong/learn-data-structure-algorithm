@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import java.util.*;
 
-public class T001_twoSum_2pointer {
+public class T0001_twoSum_2pointer {
     public List<int[]> twoSum(int[] nums, int target) {
         Arrays.sort(nums);
         int start=0;
@@ -22,7 +22,7 @@ public class T001_twoSum_2pointer {
     }
 
     public static void main(String[] args) {
-        List<int[]> ints = new T001_twoSum_2pointer().twoSum(new int[]{1, 2, 3, 4, 5, 6, 7}, 8);
+        List<int[]> ints = new T0001_twoSum_2pointer().twoSum(new int[]{1, 2, 3, 4, 5, 6, 7}, 8);
         for (int[] anInt : ints) {
             System.out.println(Arrays.toString(anInt));
 

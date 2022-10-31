@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import java.util.Arrays;
 
-public class T034_searchRange {
+public class T0034_searchRange {
     /**
      * 比如 1、2、3、3、3、4、5，通过二分查找定位到3的下标是4，
      * 则左半部分是1,2,3,3，右半部分是3,3,4,5，
@@ -11,7 +11,7 @@ public class T034_searchRange {
      */
 
     public static void main(String[] args) {
-        int[] ints = new T034_searchRange().searchRange(new int[]{1, 2, 2, 2, 3, 4}, 2);
+        int[] ints = new T0034_searchRange().searchRange(new int[]{1, 2, 2, 2, 3, 4}, 2);
         System.out.println(Arrays.toString(ints));
     }
 

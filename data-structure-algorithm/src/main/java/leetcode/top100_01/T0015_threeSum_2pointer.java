@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class T015_threeSum_2pointer {
+public class T0015_threeSum_2pointer {
     public static void main(String[] args) {
 //        List<List<Integer>> lists = new T015_threeSum().threeSum(new int[]{-1, 0, 1, 2, -1, -4});
         int[] arr = {-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4};
-        List<List<Integer>> lists = new T015_threeSum_2pointer().threeSum(arr);
+        List<List<Integer>> lists = new T0015_threeSum_2pointer().threeSum(arr);
         System.out.println(lists);
 //        int[] twoSum = new T015_threeSum().twoSum(arr, -4, 4);
 //        System.out.println(twoSum);

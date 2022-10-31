@@ -4,7 +4,7 @@ import leetcode.base.definition.ListNode;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class T023_mergeKLists {
+public class T0023_x_mergeKLists {
     public static void main(String[] args) {
     }
     public ListNode mergeKLists(ListNode[] lists) {

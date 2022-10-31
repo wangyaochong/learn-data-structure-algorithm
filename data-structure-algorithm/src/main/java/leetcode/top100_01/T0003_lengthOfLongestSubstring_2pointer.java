@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-public class T003_lengthOfLongestSubstring_2pointer {
+public class T0003_lengthOfLongestSubstring_2pointer {
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return 0;

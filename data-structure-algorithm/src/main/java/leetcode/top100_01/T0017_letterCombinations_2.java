@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class T017_letterCombinations {
+public class T0017_letterCombinations_2 {
     public static void main(String[] args) {
-        List<String> strings = new T017_letterCombinations().letterCombinations("23");
+        List<String> strings = new T0017_letterCombinations_2().letterCombinations("23");
         System.out.println(strings);
     }
 
@@ -21,25 +21,23 @@ public class T017_letterCombinations {
         candidate.put('7', "pqrs");
         candidate.put('8', "tuv");
         candidate.put('9', "wxyz");
-
-        List<String> str = new ArrayList<>();
-        for (int i = 0; i < digits.length(); i++) {
-            str.add(candidate.get(digits.charAt(i)));
-        }
         List<String> result = new ArrayList<>();
-        getResult(str, 0, result, "");
+        getResult(digits,candidate, 0, result, "");
         return result;
     }
 
-    public void getResult(List<String> candidate, int level, List<String> result, String current) {
-        if (level == candidate.size()) {
+    public void getResult(String digits,Map<Character, String>candidate, int level, List<String> result, String current) {
+        if (level == digits.length()) {
             if (!current.equals("")) {
                 result.add(current);
             }
             return;
         }
-        for (int i = 0; i < candidate.get(level).length(); i++) {
-            getResult(candidate, level + 1, result, current + candidate.get(level).charAt(i));
+
+        char key = digits.charAt(level);
+        String oneRow = candidate.get(key);
+        for (int i = 0; i < oneRow.length(); i++) {
+            getResult(digits,candidate,level + 1, result, current + oneRow.charAt(i));
         }
     }
 

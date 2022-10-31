@@ -1,6 +1,6 @@
 package leetcode.top100_01;
 
-public class T003_lengthOfLongestSubstring {
+public class T0003_lengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return 0;

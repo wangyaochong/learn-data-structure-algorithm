@@ -6,7 +6,7 @@ package leetcode.top100_01;
  * 只搜索有序的部分即可。
  */
 
-public class T033_search {
+public class T0033_search {
 
     public int search(int[] nums, int target) {
         int start=0;
@@ -49,7 +49,7 @@ public class T033_search {
 //        int[] nums = {4,5,6,7,0,1,2};
         int[] nums = {3,1};
 //        int i = new T033_search().binSearch(nums, 0, nums.length-1, 5);
-        int j = new T033_search().search(nums, 3);
+        int j = new T0033_search().search(nums, 3);
 //        System.out.println(i);
         System.out.println(j);
     }

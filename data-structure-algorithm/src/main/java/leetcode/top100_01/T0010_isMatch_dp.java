@@ -3,7 +3,7 @@ package leetcode.top100_01;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class T010_isMatch_dp {
+public class T0010_isMatch_dp {
     public boolean isMatch(String s, String p) {
         boolean[][] dp = new boolean[p.length() + 1][s.length() + 1];
         for(int x=0;x<s.length()+1;x++){

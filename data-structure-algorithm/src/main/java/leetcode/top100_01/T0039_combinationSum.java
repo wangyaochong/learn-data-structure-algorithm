@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class T039_combinationSum {
+public class T0039_combinationSum {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates);
         ArrayList<List<Integer>> result = new ArrayList<>();
@@ -30,7 +30,7 @@ public class T039_combinationSum {
     }
 
     public static void main(String[] args) {
-        List<List<Integer>> lists = new T039_combinationSum().combinationSum(new int[]{1, 2, 3, 4, 5}, 5);
+        List<List<Integer>> lists = new T0039_combinationSum().combinationSum(new int[]{1, 2, 3, 4, 5}, 5);
         System.out.println(lists);
     }
 }

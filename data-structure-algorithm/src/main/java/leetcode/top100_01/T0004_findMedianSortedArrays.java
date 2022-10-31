@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import org.junit.Test;
 
-public class T004_findMedianSortedArrays {
+public class T0004_findMedianSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int length = nums1.length + nums2.length;
         if (length % 2 == 0) {

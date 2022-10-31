@@ -3,7 +3,7 @@ package leetcode.top100_01;
 import java.util.HashMap;
 import java.util.Map;
 
-public class T001_twoSum {
+public class T0001_twoSum {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> valueLoc = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

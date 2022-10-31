@@ -3,9 +3,9 @@ package leetcode.top100_01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class T022_generateParenthesis {
+public class T0022_generateParenthesis {
     public static void main(String[] args) {
-        List<String> strings = new T022_generateParenthesis().generateParenthesis(3);
+        List<String> strings = new T0022_generateParenthesis().generateParenthesis(3);
         System.out.println(strings);
     }
     public List<String> generateParenthesis(int n) {

@@ -1,6 +1,6 @@
 package leetcode.top100_01;
 
-public class T032_longestValidParentheses {
+public class T0032_longestValidParentheses {
     public int longestValidParentheses(String s) {
         int leftMismatch = 0;
         int maxLength = 0;
@@ -44,7 +44,7 @@ public class T032_longestValidParentheses {
     }
 
     public static void main(String[] args) {
-        int i = new T032_longestValidParentheses().longestValidParentheses(")()(((())))(");
+        int i = new T0032_longestValidParentheses().longestValidParentheses(")()(((())))(");
 //        int i = new T032_longestValidParentheses().longestValidParentheses("()");
 //        int i2 = new T032_longestValidParentheses().longestValidParentheses("()()");
 //        int i3 = new T032_longestValidParentheses().longestValidParentheses("(()(()()");

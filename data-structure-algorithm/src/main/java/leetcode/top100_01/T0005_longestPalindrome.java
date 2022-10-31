@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import org.junit.Test;
 
-public class T005_longestPalindrome {
+public class T0005_longestPalindrome {
     public String longestPalindrome(String s) {
         String res = "";
         for (int i = 0; i < s.length(); i++) {

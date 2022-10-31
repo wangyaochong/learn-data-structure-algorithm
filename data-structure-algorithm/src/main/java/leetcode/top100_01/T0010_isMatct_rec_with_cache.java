@@ -3,7 +3,7 @@ package leetcode.top100_01;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class T010_isMatct_rec_with_cache {
+public class T0010_isMatct_rec_with_cache {
     public boolean isMatch(String s, String p) {
         cache = new int[100][100];
         return isMatch(s, 0, p, 0);

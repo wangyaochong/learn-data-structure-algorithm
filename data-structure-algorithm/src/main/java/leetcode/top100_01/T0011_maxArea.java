@@ -1,6 +1,6 @@
 package leetcode.top100_01;
 
-public class T011_maxArea {
+public class T0011_maxArea {
     public int maxArea(int[] height) {
         int max = 0;
         int left=0;

@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import org.junit.Test;
 
-public class T003_lengthOfLongestSubstring_2 {
+public class T0003_lengthOfLongestSubstring_2 {
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return 0;

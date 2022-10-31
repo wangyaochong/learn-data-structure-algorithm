@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import leetcode.base.definition.ListNode;
 
-public class T002_addTwoNumbers {
+public class T0002_addTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int n1 = 0, n2 = 0, carry = 0;
         ListNode result = new ListNode();

@@ -2,7 +2,7 @@ package leetcode.top100_01;
 
 import leetcode.base.definition.ListNode;
 
-public class T019_removeNthFromEnd {
+public class T0019_removeNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode tag = new ListNode();
         tag.next = head;
@@ -32,7 +32,7 @@ public class T019_removeNthFromEnd {
         ListNode n3 = new ListNode(3);
         n1.next=n2;
         n2.next=n3;
-        ListNode listNode = new T019_removeNthFromEnd().removeNthFromEnd(n1, 3);
+        ListNode listNode = new T0019_removeNthFromEnd().removeNthFromEnd(n1, 3);
         System.out.println(listNode);
     }
 }
