@@ -32,8 +32,11 @@ public class D_QuickSort_Easiest_Understand {
 
     @Test
     public void testSort2(){
-        int[] array = {1, 2, 3, 4, 2, 3, 5};
-        sort(array, 0, array.length - 1);
+           int[] array = {3,1, 2, 3, 4, 2, 3, 5};
+        System.out.println(partition(array,0,array.length-1));
+
+//        int[] array = {1, 2, 3, 4, 2, 3, 5};
+//        sort(array, 0, array.length - 1);
         UtilArray.display(array);
     }
 }
