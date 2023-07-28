@@ -75,7 +75,7 @@ public class p149_MaxPointsonaLine {
 
     @Test
     public void testGcd() {
-        System.out.println(gcd(3, 8));
+        System.out.println(gcd(2, 8));
     }
 
 }

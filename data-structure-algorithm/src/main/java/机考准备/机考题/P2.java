@@ -1,4 +1,4 @@
-package 机考准备;
+package 机考准备.机考题;
 
 import org.junit.Test;
 
@@ -34,9 +34,6 @@ public class P2 {
         boolean has = false;
         for (int i = start; i <= end; i++) {
             for (int j = i + 1; j <= end; j++) {
-                if (!checkPrim(i, j)) {
-                    break;
-                }
                 if (i * i + j * j > 10000 * 10000) {
                     break;
                 }

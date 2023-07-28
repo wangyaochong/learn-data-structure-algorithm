@@ -1,4 +1,4 @@
-package 机考准备;
+package 机考准备.机考题;
 
 import java.util.ArrayList;
 import java.util.List;
