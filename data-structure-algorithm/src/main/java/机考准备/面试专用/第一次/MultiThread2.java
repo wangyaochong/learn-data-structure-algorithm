@@ -1,6 +1,4 @@
-package 机考准备.面试专用.一面;
-
-import org.checkerframework.checker.units.qual.A;
+package 机考准备.面试专用.第一次;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadFactory;

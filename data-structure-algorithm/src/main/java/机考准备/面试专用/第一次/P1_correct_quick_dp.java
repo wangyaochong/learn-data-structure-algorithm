@@ -1,6 +1,7 @@
-package 机考准备.面试专用.一面;
+package 机考准备.面试专用.第一次;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 /*
 给你一个下标从 0 开始的正整数数组 tasks ，表示需要 按顺序 完成的任务，其中 tasks[i] 表示第 i 件任务的 类型 。
 
@@ -48,7 +49,7 @@ import java.util.*;
  */
 
 
-public class P1_correct_linkedList {
+public class P1_correct_quick_dp {
     public static void main(String[] args) {
 //        System.out.println(solve(new int[]{1, 2, 1, 2, 3, 1}, 3));
 //        System.out.println(solve(new int[]{5, 8, 8, 5}, 2));
@@ -56,30 +57,19 @@ public class P1_correct_linkedList {
     }
 
     public static long solve(int[] task, int space) {
-        LinkedList<Integer> window = new LinkedList<>();
-        long totalDayCount = 0;
-        for (int i = 0; i < task.length; i++) {
-            if (!window.contains(task[i])) {
-                window.add(task[i]);
-                totalDayCount++;
-                if (window.size() > space) {
-                    window.removeFirst();
-                }
+        long[] dp = new long[task.length];
+        dp[0] = 1;
+        Map<Integer, Integer> typeLastLoc = new HashMap<>();
+        typeLastLoc.put(task[0], 0);
+        for (int i = 1; i < task.length; i++) {
+            Integer lastLoc = typeLastLoc.get(task[i]);
+            if (lastLoc == null) {
+                dp[i] = dp[i - 1] + 1;
             } else {
-                while (window.contains(task[i])) {
-                    window.add(-1);
-                    totalDayCount++;
-                    if (window.size() > space) {
-                        window.removeFirst();
-                    }
-                }
-                window.add(task[i]);
-                totalDayCount++;
-                if (window.size() > space) {
-                    window.removeFirst();
-                }
+                dp[i] = Math.max(dp[i - 1] + 1, dp[lastLoc] + space + 1);
             }
+            typeLastLoc.put(task[i], i);
         }
-        return totalDayCount;
+        return dp[task.length - 1];
     }
 }

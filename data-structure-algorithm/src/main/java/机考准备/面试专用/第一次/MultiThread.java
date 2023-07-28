@@ -1,4 +1,4 @@
-package 机考准备.面试专用.一面;
+package 机考准备.面试专用.第一次;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

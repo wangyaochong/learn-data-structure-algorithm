@@ -1,7 +1,9 @@
-package 机考准备.面试专用.一面;
+package 机考准备.面试专用.第一次;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 /*
 给你一个下标从 0 开始的正整数数组 tasks ，表示需要 按顺序 完成的任务，其中 tasks[i] 表示第 i 件任务的 类型 。
 
@@ -49,27 +51,42 @@ import java.util.Map;
  */
 
 
-public class P1_correct_quick_dp {
+public class P1_correct_map {
     public static void main(String[] args) {
 //        System.out.println(solve(new int[]{1, 2, 1, 2, 3, 1}, 3));
 //        System.out.println(solve(new int[]{5, 8, 8, 5}, 2));
         System.out.println(solve(new int[]{4, 10, 10, 9, 10, 4, 10, 4}, 8));
     }
 
-    public static long solve(int[] task, int space) {
-        long[] dp = new long[task.length];
-        dp[0] = 1;
-        Map<Integer, Integer> typeLastLoc = new HashMap<>();
-        typeLastLoc.put(task[0], 0);
-        for (int i = 1; i < task.length; i++) {
-            Integer lastLoc = typeLastLoc.get(task[i]);
-            if (lastLoc == null) {
-                dp[i] = dp[i - 1] + 1;
+    public static int solve(int[] task, int space) {
+        Map<Integer, Integer> typeDayLeft = new HashMap<>();
+        int totalDayCount = 0;
+        for (int i = 0; i < task.length; i++) {
+            int decDayCount = 1;
+            Integer LeftDayCount = typeDayLeft.get(task[i]);
+            if (LeftDayCount == null || LeftDayCount == 0) {
+                typeDayLeft.put(task[i], space);
+                totalDayCount += 1;
             } else {
-                dp[i] = Math.max(dp[i - 1] + 1, dp[lastLoc] + space + 1);
+                totalDayCount += LeftDayCount;
+                decDayCount = LeftDayCount + 1;
+                totalDayCount += 1;
+                typeDayLeft.put(task[i], space);
             }
-            typeLastLoc.put(task[i], i);
+            Set<Integer> toRemove = new HashSet<>();
+            for (Map.Entry<Integer, Integer> entry : typeDayLeft.entrySet()) {
+                Integer TmpDayLeft = typeDayLeft.get(entry.getKey());
+                if (TmpDayLeft == null || TmpDayLeft == 0) {
+                    toRemove.add(entry.getKey());
+                } else if (entry.getKey() != task[i]) {
+                    typeDayLeft.put(entry.getKey(), Math.max(0, entry.getValue() - decDayCount));
+                }
+            }
+            for (Integer integer : toRemove) {
+                typeDayLeft.remove(integer);
+            }
+
         }
-        return dp[task.length - 1];
+        return totalDayCount;
     }
 }
