@@ -1,4 +1,4 @@
-package leetcode.byNumber;
+package leetcode.byNumber.p500;
 
 import org.junit.Test;
 
