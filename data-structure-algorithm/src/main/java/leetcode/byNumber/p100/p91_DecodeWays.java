@@ -25,6 +25,6 @@ public class p91_DecodeWays {
 
     @Test
     public void test() {
-        System.out.println(numDecodings("01111"));
+        System.out.println(numDecodings("11111"));
     }
 }
